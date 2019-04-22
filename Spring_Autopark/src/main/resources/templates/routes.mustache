@@ -1,0 +1,62 @@
+<html>
+<body>
+<div>
+    <form method="post">
+        <label for="routeTitle" class="control-label col-xs-4">Enter Route Title: </label>
+        <input type="text" name="routeTitle"/><br>
+
+        <label for="cityOfDeparture" class="control-label col-xs-4">City of departure: </label>
+        <input type="text" name="cityOfDeparture"><br>
+
+        <label for="cityOfArrivel" class="control-label col-xs-4">City of arrival: </label>
+        <input type="text" name="cityOfArrivel"><br>
+
+        <label for="routeDuration" class="control-label col-xs-4">Route duration: </label>
+        <input type="text" name="routeDuration"> <br>
+
+        <label for="driverID" class="control-label col-xs-4">Enter Driver ID: </label>
+        <input type="text" name="driverID"><br>
+
+        <label for="busID" class="control-label col-xs-4">Enter Bus ID: </label>
+        <input type="text" name="busID"><br>
+
+        <label for="departureTime" class="control-label col-xs-4">Departure Time: </label>
+        <input type="text" name="departureTime"> <br>
+
+        <label for="arrivalTime" class="control-label col-xs-4">Arrival Time: </label>
+        <input type="text" name="arrivalTime"><br>
+
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>Routes</div>
+{{#routes}}
+    <div>
+        <table style="width:100%">
+            <tr>
+                <th>Route ID</th>
+                <th>Route Title</th>
+                <th>City of Departure</th>
+                <th>City of Arrival</th>
+                <th>Route Duration</th>
+                <th>Driver ID</th>
+                <th>Bus ID</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+            </tr>
+            <tr>
+                <td>{{id}}</td>
+                <td>{{routeTitle}}</td>
+                <td>{{cityOfDeparture}}</td>
+                <td>{{cityOfArrivel}}</td>
+                <td>{{routeDuration}}</td>
+                <td>{{driverID}}</td>
+                <td>{{busID}}</td>
+                <td>{{departureTime}}</td>
+                <td>{{arrivalTime}}</td>
+            </tr>
+        </table>
+    </div>
+{{/routes}}
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<body>
+
+<div>
+    <form method="post">
+        <label for="busID" class="control-label col-xs-4">Enter Bus ID: </label>
+        <input type="text" name="busID" required = true /><br><br>
+
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+
+<div>
+<table>
+    <tr>
+        <th>Bus ID</th>
+        <th>Bus Model</th>
+    </tr>
+{{#bus}}
+        <tr>
+            <td>{{busID}}</td>
+            <td>{{busModel}}</td>
+        </tr>
+    </table>
+    </div>
+{{/bus}}
+
+</body>
+</html>`

@@ -1,0 +1,39 @@
+<html>
+
+<body>
+
+<h2><b>Bus Page</b></h2>
+<div>
+    <form method="POST">
+        <label for="busID" class="control-label col-xs-4">Enter Bus ID: </label>
+        <input type="text" name="busID" required = true /><br><br>
+        <label for="busModel" class="control-label col-xs-4">Enter Bus Model: </label>
+        <input type="text" name="busModel" required = true /><br><br>
+        <label for="maxCountOfPassegers" class="control-label col-xs-4">Enter Max count of Passagers in the bus: </label>
+        <input type="text" name="maxCountOfPassegers" required = true /><br><br>
+        <label for="miles" class="control-label col-xs-4">How much miles : </label>
+        <input type="text" name="miles" required = true /><br><br>
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<a href="/deleteBus">Delete Bus</a>
+<br><br>
+
+
+    <div>
+        <table>
+            <tr>
+                <th>Bus ID</th>
+                <th>Bus Model</th>
+            </tr>
+{{#bus}}
+            <tr>
+                <td>{{busID}}</td>
+                <td>{{busModel}}</td>
+            </tr>
+        </table>
+    </div>
+{{/bus}}
+</body>
+</html>
